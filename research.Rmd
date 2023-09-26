@@ -6,7 +6,7 @@ site: distill::distill_website
 
 ## [Food Security Dynamics in the U.S., 2001-2017](files/AJAE_MS_22016_manuscript_Jun_2023_Revision.pdf){target="_blank"}
 
-With [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} and [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"} - *Conditionally Accepted* at *American Journal of Agricultural Economics*
+With [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} and [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"} - *Forthcoming* at *American Journal of Agricultural Economics*
 
 ***Abstract***: We study household food security dynamics in the United States from 2001 to 2017 using a new measure, the probability of food security (PFS), the estimated probability that a household’s food expenditures equal or exceed the minimum cost of a healthful diet. We use PFS to analyze household-level and subpopulation-scale dynamics by investigating the conditional distribution of estimated food insecurity spells and the chronic and transient components of estimated food insecurity. We find that two-thirds of households experienced no estimated food insecurity during the 2001-17 period and more than half of newly food insecure households regain food security within two years. Households headed by female, non-White, or less educated individuals disproportionately suffer persistent, chronic and/or severe food insecurity.
 
