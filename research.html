@@ -827,9 +827,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -924,6 +936,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1685,6 +1702,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1762,8 +1785,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1789,12 +1813,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -2473,6 +2498,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>Research</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2481,32 +2507,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h1 id="publications">Publications</h1>
-<h2 id="food-security-dynamics-in-the-u.s.-2001-2017"><a href="files/AJAE_MS_22016_manuscript_Jun_2023_Revision.pdf" target="_blank">Food Security Dynamics in the U.S., 2001-2017</a></h2>
-<p>With <a href="http://barrett.dyson.cornell.edu/" target="_blank">Christopher B. Barrett</a> and <a href="https://www.human.cornell.edu/people/jfh246" target="_blank">John H. Hoddinott</a> - <em>Forthcoming</em> at <em>American Journal of Agricultural Economics</em></p>
+<h3 id="food-security-dynamics-in-the-u.s.-2001-2017-jmp"><a href="files/Food_Security_Dynamics_AJAE_published.pdf" target="_blank">Food Security Dynamics in the U.S., 2001-2017</a> (JMP)</h3>
+<p>With <a href="http://barrett.dyson.cornell.edu/" target="_blank">Christopher B. Barrett</a> and <a href="https://www.human.cornell.edu/people/jfh246" target="_blank">John H. Hoddinott</a> - <em>Early View</em> at <em>American Journal of Agricultural Economics</em></p>
 <p><strong><em>Abstract</em></strong>: We study household food security dynamics in the United States from 2001 to 2017 using a new measure, the probability of food security (PFS), the estimated probability that a household’s food expenditures equal or exceed the minimum cost of a healthful diet. We use PFS to analyze household-level and subpopulation-scale dynamics by investigating the conditional distribution of estimated food insecurity spells and the chronic and transient components of estimated food insecurity. We find that two-thirds of households experienced no estimated food insecurity during the 2001-17 period and more than half of newly food insecure households regain food security within two years. Households headed by female, non-White, or less educated individuals disproportionately suffer persistent, chronic and/or severe food insecurity.</p>
 <h1 id="working-papers">Working Papers</h1>
-<h2 id="domestic-or-imported-an-analysis-of-rice-demand-in-senegal"><a href="files/Senegal_rice.pdf" target="_blank">Domestic or Imported? An Analysis of Rice Demand in Senegal</a></h2>
+<h3 id="the-probability-of-food-security-a-new-longitudinal-data-set-using-the-panel-study-of-income-dynamics.">The Probability of Food Security: A new longitudinal data set using the Panel Study of Income Dynamics.</h3>
+<p>With <a href="https://www.human.cornell.edu/people/jfh246" target="_blank">John H. Hoddinott</a>, <a href="http://barrett.dyson.cornell.edu/" target="_blank">Christopher B. Barrett</a>, and <a href="https://www.ers.usda.gov/authors/ers-staff-directory/matthew-p-rabbitt/" target="_blank">Matthew P. Rabbitt</a> - <em>Revise and Resubmit</em> at <em>Applied Economic Perspectives &amp; Policy</em></p>
+<h3 id="domestic-or-imported-an-analysis-of-rice-demand-in-senegal"><a href="files/Senegal_rice.pdf" target="_blank">Domestic or Imported? An Analysis of Rice Demand in Senegal</a></h3>
 <p>With <a href="http://barrett.dyson.cornell.edu/staars/fellows/ndeye.html" target="_blank">Ndèye Fatou Faye</a>, <a href="http://barrett.dyson.cornell.edu/staars/fellows/amy.html" target="_blank">Amy Faye</a>, <a href="http://barrett.dyson.cornell.edu/staars/fellows/mouhamed.html" target="_blank">Mouhamed Rassoul Sye</a> and <a href="https://jomcpeak.expressions.syr.edu/" target="_blank">John McPeak</a></p>
-<p><strong><em>Abstract</em></strong>: Rice is among the most important cereals for African countries which absorb more than half of worldwide exports. West African countries depend particularly on rice imports in order to achieve food security. For this reason, many policy measures are implemented by governments to regulate the market and reduce the import dependency. This paper contributes to the rice policy debate by analyzing the demand side using the case study of Senegal in West Africa. We analyzed detailed data on rice consumption using a large primary survey of 6,328 rural and urban households in Senegal, with the QUAIDS model. Qualitative data were also collected and analyzed to better interpret results. We found that rural households consume far less local rice than their urban counterparts, meaning that location is a determinant of local rice consumption. We also show that types of rice consumed differ between rural and urban consumers. Urban households consume relatively more whole grain local rice while rural households consume more broken imported rice. Thus, to increase consumption of local rice, efforts should thus be made on the availability of broken local rice for both urban and rural consumers. Our results indicate no substitutability between domestic rice and imported rice in urban households and weak substitutability in rural households. In addition, results show that rice demand is price inelastic. Thus, price policies like subsidies or taxes may not be good shifters of domestic rice consumption.</p>
-<h1 id="work-in-progress">Work in Progress</h1>
-<h2 id="poverty-dynamics-in-peru---a-data-driven-approach-using-synthetic-panel">Poverty Dynamics in Peru - a Data-Driven Approach Using Synthetic Panel</h2>
-<p>With <a href="https://hongdi-zhao.github.io/" target="_blank">Hongdi Zhao</a></p>
-<!--
-***Abstract***: Understanding individual and household-level welfare dynamics is very important, and it can help economics and policymakers to study and design policies to help households trapped in long-term poverty. However, long-term household-level panel data to study the poverty dynamics are often unavailable. The synthetic panel method has been used recently to estimate poverty transition using cross-sectional data, from bounded estimates under weaker assumptions to point estimates under stronger assumptions of cohort-level information. Point estimates have been very sensitive to how cohorts are defined, but there has been no clear guideline of how cohorts should be defined. This paper suggests a data-driven way to define cohorts, through clustering households with similar dynamics in the error term over the period into cohorts. Using the Peru National Household Survey on Living Conditions and Poverty (ENAHO) from 2007 to 2019, we estimate long-term poverty dynamics up to six years, testing the robustness of the estimates in the long run.
--->
-<h2 id="estimating-multidimensional-development-resilience">Estimating Multidimensional Development Resilience</h2>
+<!-- ***Abstract***: Rice is among the most important cereals for African countries which absorb more than half of worldwide exports. West African countries depend particularly on rice imports in order to achieve food security. For this reason, many policy measures are implemented by governments to regulate the market and reduce the import dependency. This paper contributes to the rice policy debate by analyzing the demand side using the case study of Senegal in West Africa. We analyzed detailed data on rice consumption using a large primary survey of 6,328 rural and urban households in Senegal, with the QUAIDS model. Qualitative data were also collected and analyzed to better interpret results. We found that rural households consume far less local rice than their urban counterparts, meaning that location is a determinant of local rice consumption. We also show that types of rice consumed differ between rural and urban consumers. Urban households consume relatively more whole grain local rice while rural households consume more broken imported rice. Thus, to increase consumption of local rice, efforts should thus be made on the availability of broken local rice for both urban and rural consumers. Our results indicate no substitutability between domestic rice and imported rice in urban households and weak substitutability in rural households. In addition, results show that rice demand is price inelastic. Thus, price policies like subsidies or taxes may not be good shifters of domestic rice consumption. -->
+<h3 id="how-much-does-snap-matter-snaps-effects-on-food-security"><a href="files/SNAP_on_Food_Security_Nov2023.pdf" target="_blank">How much does SNAP Matter? SNAP’s Effects on Food Security</a></h3>
+<h3 id="estimating-multidimensional-development-resilience"><a href="files/Estimating_Multidimensional_Development_Resilience-202311.pdf" target="_blank">Estimating Multidimensional Development Resilience</a></h3>
 <p>With <a href="https://www.ifpri.org/profile/kibrom-abay" target="_blank">Kibrom A. Abay</a> and <a href="http://barrett.dyson.cornell.edu/" target="_blank">Christopher B. Barrett</a></p>
 <!--
 ***Abstract***: Resilience measurement has received substantial attention over the past decade or so. Existing measures, however, relate resilience to a single well-being indicator. This may be problematic in contexts where households face deprivations in multiple dimensions. We explore how sensitive estimates of household-level resilience are to the specific well-being indicator used and show that measures are only weakly correlated across different, reasonable indicators based on expenditure-based poverty, dietary diversity, and livestock asset holdings. We then introduce a multidimensional resilience measure, integrating the probabilistic moment-based resilience measurement approach with the multidimensional poverty measurement method. Applying the new method to household panel data, we show that univariate and multidimensional resilience measures can yield varied inferences on the development resilience impact of development interventions such as Ethiopia's Productive Safety Net Program.
 -->
-<h2 id="the-effects-of-snap-on-estimated-food-security-and-its-dynamics">The Effects of SNAP on Estimated Food Security and Its Dynamics</h2>
+<h1 id="work-in-progress">Work in Progress</h1>
+<h3 id="poverty-dynamics-in-peru---a-data-driven-approach-using-synthetic-panel">Poverty Dynamics in Peru - a Data-Driven Approach Using Synthetic Panel</h3>
+<p>With <a href="https://hongdi-zhao.github.io/" target="_blank">Hongdi Zhao</a></p>
+<!--
+***Abstract***: Understanding individual and household-level welfare dynamics is very important, and it can help economics and policymakers to study and design policies to help households trapped in long-term poverty. However, long-term household-level panel data to study the poverty dynamics are often unavailable. The synthetic panel method has been used recently to estimate poverty transition using cross-sectional data, from bounded estimates under weaker assumptions to point estimates under stronger assumptions of cohort-level information. Point estimates have been very sensitive to how cohorts are defined, but there has been no clear guideline of how cohorts should be defined. This paper suggests a data-driven way to define cohorts, through clustering households with similar dynamics in the error term over the period into cohorts. Using the Peru National Household Survey on Living Conditions and Poverty (ENAHO) from 2007 to 2019, we estimate long-term poverty dynamics up to six years, testing the robustness of the estimates in the long run.
+-->
 <!--
 ***Abstract***: This study investigates the effects of SNAP on food security and its dynamics. The study uses state-level SNAP Policy Index as an exogenous variation as an instrumental variable for program benefit redemption. Using Panel Study of Income Dynamics (PSID) data, the study observe the effects of the program participation on food security over the next 10 years, using the measures of chronic and transitory food security constructed from the Probability of Food Security (PFS), a new food insecurity measure that reflects the estimated probability that the household’s predicted food expenditures exceed the cost of the Thrifty Food Plan (TFP) for its household composition, location and survey period.
 -->
-<h2 id="estimates-of-us-food-insecurity-dynamics-measuring-food-insecurity-across-the-us-with-a-new-synthetic-panel-approach">Estimates of US Food Insecurity Dynamics: Measuring Food Insecurity Across the US with a New Synthetic Panel Approach</h2>
+<h3 id="estimates-of-us-food-insecurity-dynamics-measuring-food-insecurity-across-the-us-with-a-new-synthetic-panel-approach">Estimates of US Food Insecurity Dynamics: Measuring Food Insecurity Across the US with a New Synthetic Panel Approach</h3>
 <p>With <a href="https://shoganhennessy.github.io/" target="_blank">Senan Hogan-Hennessy</a> and <a href="http://barrett.dyson.cornell.edu/" target="_blank">Christopher B. Barrett</a></p>
-<h2 id="the-probability-of-food-security-a-new-longitudinal-data-set-using-the-panel-study-of-income-dynamics.">The Probability of Food Security: A new longitudinal data set using the Panel Study of Income Dynamics.</h2>
-<p>With <a href="https://www.ers.usda.gov/authors/ers-staff-directory/matthew-p-rabbitt/" target="_blank">Matthew P. Rabbitt</a>, <a href="http://barrett.dyson.cornell.edu/" target="_blank">Christopher B. Barrett</a> and <a href="https://www.human.cornell.edu/people/jfh246" target="_blank">John H. Hoddinott</a></p>
 <!-- ## [Gender differences in tertiary healthcare](files/Gender_healthcare.pdf){target="_blank"} -->
 <!-- With [Tarun Jain](https://sites.google.com/virginia.edu/tarunjain/home?authuser=0){target="_blank"} and [Revathy Suryanarayana](https://revathy-suryanarayana.github.io/){target="_blank"} -->
 <!-- ***Abstract***: We examine gender differences in access to and service within a publicly financed tertiary healthcare program in Andhra Pradesh India. We use claim-level administrative data from the program to estimate gender differences in access and services. We classify the distance the patient travels as access variables and the time for claim authorization, treatment, and discharge, as well as the amount approved and paid as service variables. We use a regression framework to control for the influence of other patient characteristics, the type of procedure, hospital, and quarter of treatment in making gender comparisons. -->

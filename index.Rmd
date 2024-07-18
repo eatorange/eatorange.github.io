@@ -7,9 +7,9 @@ site: distill::distill_website
 <img src="images/seungmin.jpg" style="width:40%;" >
 </left>
 
-<p>&nbsp;(with my nephew Teo. The larger one)</p>  
+<p>&nbsp;</p>  
 
 
-I am a Ph.D. candidate in the field of Applied Economics and Management at Cornell University. My primary interest is measuring and estimating household welfare - food security, poverty and resilience - and its long-term dynamics. My area of interest include development economics, applied econometrics and public policy.
+I am a Ph.D. candidate in the field of Applied Economics and Management at Cornell University. My primary interest is food security and food policy. My area of interest include agricultural economics, applied econometrics, public policy and development economics.
 
 Before coming to Cornell, I received B.S. from the University of Michigan in Ann Arbor. I worked as a research assistant at Innovations for Poverty Action (IPA) and Yale University, and as a consultant at Development Impact Evaluation (DIME) at the World Bank.

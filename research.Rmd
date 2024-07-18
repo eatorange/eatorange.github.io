@@ -4,32 +4,27 @@ site: distill::distill_website
 ---
 # Publications
 
-## [Food Security Dynamics in the U.S., 2001-2017](files/AJAE_MS_22016_manuscript_Jun_2023_Revision.pdf){target="_blank"}
+### [Food Security Dynamics in the U.S., 2001-2017](files/Food_Security_Dynamics_AJAE_published.pdf){target="_blank"} (JMP)
 
-With [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} and [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"} - *Forthcoming* at *American Journal of Agricultural Economics*
+With [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} and [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"} - *Early View* at *American Journal of Agricultural Economics* 
 
 ***Abstract***: We study household food security dynamics in the United States from 2001 to 2017 using a new measure, the probability of food security (PFS), the estimated probability that a household’s food expenditures equal or exceed the minimum cost of a healthful diet. We use PFS to analyze household-level and subpopulation-scale dynamics by investigating the conditional distribution of estimated food insecurity spells and the chronic and transient components of estimated food insecurity. We find that two-thirds of households experienced no estimated food insecurity during the 2001-17 period and more than half of newly food insecure households regain food security within two years. Households headed by female, non-White, or less educated individuals disproportionately suffer persistent, chronic and/or severe food insecurity.
 
 # Working Papers
 
-## [Domestic or Imported? An Analysis of Rice Demand in Senegal](files/Senegal_rice.pdf){target="_blank"}
+### The Probability of Food Security: A new longitudinal data set using the Panel Study of Income Dynamics.
+
+With [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"}, [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"}, and [Matthew P. Rabbitt](https://www.ers.usda.gov/authors/ers-staff-directory/matthew-p-rabbitt/){target="_blank"}  - *Revise and Resubmit* at *Applied Economic Perspectives & Policy*
+
+### [Domestic or Imported? An Analysis of Rice Demand in Senegal](files/Senegal_rice.pdf){target="_blank"}
 
 With [Ndèye Fatou Faye](http://barrett.dyson.cornell.edu/staars/fellows/ndeye.html){target="_blank"}, [Amy Faye](http://barrett.dyson.cornell.edu/staars/fellows/amy.html){target="_blank"}, [Mouhamed Rassoul Sye](http://barrett.dyson.cornell.edu/staars/fellows/mouhamed.html){target="_blank"} and [John McPeak](https://jomcpeak.expressions.syr.edu/){target="_blank"}
 
-***Abstract***: Rice is among the most important cereals for African countries which absorb more than half of worldwide exports. West African countries depend particularly on rice imports in order to achieve food security. For this reason, many policy measures are implemented by governments to regulate the market and reduce the import dependency. This paper contributes to the rice policy debate by analyzing the demand side using the case study of Senegal in West Africa. We analyzed detailed data on rice consumption using a large primary survey of 6,328 rural and urban households in Senegal, with the QUAIDS model. Qualitative data were also collected and analyzed to better interpret results. We found that rural households consume far less local rice than their urban counterparts, meaning that location is a determinant of local rice consumption. We also show that types of rice consumed differ between rural and urban consumers. Urban households consume relatively more whole grain local rice while rural households consume more broken imported rice. Thus, to increase consumption of local rice, efforts should thus be made on the availability of broken local rice for both urban and rural consumers. Our results indicate no substitutability between domestic rice and imported rice in urban households and weak substitutability in rural households. In addition, results show that rice demand is price inelastic. Thus, price policies like subsidies or taxes may not be good shifters of domestic rice consumption.
+<!-- ***Abstract***: Rice is among the most important cereals for African countries which absorb more than half of worldwide exports. West African countries depend particularly on rice imports in order to achieve food security. For this reason, many policy measures are implemented by governments to regulate the market and reduce the import dependency. This paper contributes to the rice policy debate by analyzing the demand side using the case study of Senegal in West Africa. We analyzed detailed data on rice consumption using a large primary survey of 6,328 rural and urban households in Senegal, with the QUAIDS model. Qualitative data were also collected and analyzed to better interpret results. We found that rural households consume far less local rice than their urban counterparts, meaning that location is a determinant of local rice consumption. We also show that types of rice consumed differ between rural and urban consumers. Urban households consume relatively more whole grain local rice while rural households consume more broken imported rice. Thus, to increase consumption of local rice, efforts should thus be made on the availability of broken local rice for both urban and rural consumers. Our results indicate no substitutability between domestic rice and imported rice in urban households and weak substitutability in rural households. In addition, results show that rice demand is price inelastic. Thus, price policies like subsidies or taxes may not be good shifters of domestic rice consumption. -->
 
+### [How much does SNAP Matter? SNAP’s Effects on Food Security](files/SNAP_on_Food_Security_Nov2023.pdf){target="_blank"}
 
-# Work in Progress
-
-## Poverty Dynamics in Peru - a Data-Driven Approach Using Synthetic Panel
-
-With [Hongdi Zhao](https://hongdi-zhao.github.io/){target="_blank"}
-
-<!--
-***Abstract***: Understanding individual and household-level welfare dynamics is very important, and it can help economics and policymakers to study and design policies to help households trapped in long-term poverty. However, long-term household-level panel data to study the poverty dynamics are often unavailable. The synthetic panel method has been used recently to estimate poverty transition using cross-sectional data, from bounded estimates under weaker assumptions to point estimates under stronger assumptions of cohort-level information. Point estimates have been very sensitive to how cohorts are defined, but there has been no clear guideline of how cohorts should be defined. This paper suggests a data-driven way to define cohorts, through clustering households with similar dynamics in the error term over the period into cohorts. Using the Peru National Household Survey on Living Conditions and Poverty (ENAHO) from 2007 to 2019, we estimate long-term poverty dynamics up to six years, testing the robustness of the estimates in the long run.
--->
-
-## Estimating Multidimensional Development Resilience
+### [Estimating Multidimensional Development Resilience](files/Estimating_Multidimensional_Development_Resilience-202311.pdf){target="_blank"}
 
 With [Kibrom A. Abay](https://www.ifpri.org/profile/kibrom-abay){target="_blank"} and [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"}
 
@@ -37,21 +32,28 @@ With [Kibrom A. Abay](https://www.ifpri.org/profile/kibrom-abay){target="_blank"
 ***Abstract***: Resilience measurement has received substantial attention over the past decade or so. Existing measures, however, relate resilience to a single well-being indicator. This may be problematic in contexts where households face deprivations in multiple dimensions. We explore how sensitive estimates of household-level resilience are to the specific well-being indicator used and show that measures are only weakly correlated across different, reasonable indicators based on expenditure-based poverty, dietary diversity, and livestock asset holdings. We then introduce a multidimensional resilience measure, integrating the probabilistic moment-based resilience measurement approach with the multidimensional poverty measurement method. Applying the new method to household panel data, we show that univariate and multidimensional resilience measures can yield varied inferences on the development resilience impact of development interventions such as Ethiopia's Productive Safety Net Program.
 -->
 
-## The Effects of SNAP on Estimated Food Security and Its Dynamics
+
+
+# Work in Progress
+
+### Poverty Dynamics in Peru - a Data-Driven Approach Using Synthetic Panel
+
+With [Hongdi Zhao](https://hongdi-zhao.github.io/){target="_blank"}
+
+<!--
+***Abstract***: Understanding individual and household-level welfare dynamics is very important, and it can help economics and policymakers to study and design policies to help households trapped in long-term poverty. However, long-term household-level panel data to study the poverty dynamics are often unavailable. The synthetic panel method has been used recently to estimate poverty transition using cross-sectional data, from bounded estimates under weaker assumptions to point estimates under stronger assumptions of cohort-level information. Point estimates have been very sensitive to how cohorts are defined, but there has been no clear guideline of how cohorts should be defined. This paper suggests a data-driven way to define cohorts, through clustering households with similar dynamics in the error term over the period into cohorts. Using the Peru National Household Survey on Living Conditions and Poverty (ENAHO) from 2007 to 2019, we estimate long-term poverty dynamics up to six years, testing the robustness of the estimates in the long run.
+-->
+
+
+
 
 <!--
 ***Abstract***: This study investigates the effects of SNAP on food security and its dynamics. The study uses state-level SNAP Policy Index as an exogenous variation as an instrumental variable for program benefit redemption. Using Panel Study of Income Dynamics (PSID) data, the study observe the effects of the program participation on food security over the next 10 years, using the measures of chronic and transitory food security constructed from the Probability of Food Security (PFS), a new food insecurity measure that reflects the estimated probability that the household’s predicted food expenditures exceed the cost of the Thrifty Food Plan (TFP) for its household composition, location and survey period.
 -->
 
-## Estimates of US Food Insecurity Dynamics: Measuring Food Insecurity Across the US with a New Synthetic Panel Approach
+### Estimates of US Food Insecurity Dynamics: Measuring Food Insecurity Across the US with a New Synthetic Panel Approach
 
 With [Senan Hogan-Hennessy](https://shoganhennessy.github.io/){target="_blank"} and [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} 
-
-
-## The Probability of Food Security: A new longitudinal data set using the Panel Study of Income Dynamics.
-
-With [Matthew P. Rabbitt](https://www.ers.usda.gov/authors/ers-staff-directory/matthew-p-rabbitt/){target="_blank"}, [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} and [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"}
-
 
 
 <!-- ## [Gender differences in tertiary healthcare](files/Gender_healthcare.pdf){target="_blank"} -->
