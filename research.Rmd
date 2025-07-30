@@ -40,7 +40,7 @@ With [Ndèye Fatou Faye](http://barrett.dyson.cornell.edu/staars/fellows/ndeye.h
 
 # Work in Progress
 
-### Poverty Dynamics in Peru - a Data-Driven Approach Using Synthetic Panel
+### Poverty Dynamics in Peru - a Data-Driven Approach using Grouped Fixed Effects 
 
 With [Hongdi Zhao](https://hongdi-zhao.github.io/){target="_blank"}
 
@@ -58,6 +58,23 @@ With [Hongdi Zhao](https://hongdi-zhao.github.io/){target="_blank"}
 ### Food Insecurity Among US Military Veterans
 
 With [Senan Hogan-Hennessy](https://shoganhennessy.github.io/){target="_blank"}, [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"}, [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"}, and [Matthew P. Rabbitt](https://www.ers.usda.gov/authors/ers-staff-directory/matthew-p-rabbitt/){target="_blank"}
+
+### Inequality, Participation, and the Design of Local Development Projects: Experimental Evidence
+
+with [Nathan Cook](https://nathancookphd.com/){target="_blank"}, [Tara Grillos](https://www.taragrillos.com/){target="_blank"}, and [Krister Andersson](https://keough.nd.edu/about/faculty-staff-directory/krister-andersson/){target="_blank"}
+
+### Social Impact of Conservation Interventions
+
+with [Sacha Ortiz Siani](https://keough.nd.edu/about/faculty-staff-directory/sacha-ortiz-siani/){target="_blank"}, [Krister Andersson](https://keough.nd.edu/about/faculty-staff-directory/krister-andersson/){target="_blank"}, [Lakshmi Iyer](https://sites.nd.edu/lakshmi-iyer/){target="_blank"} and [Daniel C. Miller](https://keough.nd.edu/about/faculty-staff-directory/daniel-miller/){target="_blank"}
+
+### The Effects of REDD+ on Inequality
+
+with [Nathan Cook](https://nathancookphd.com/){target="_blank"} and [Adriana Molina-Garzón](https://adrianamolinagarzon.com/){target="_blank"}
+
+### The Effects of Decentraliziation on Socioeconomic Well-being; Evidence from Bolivia and Peru
+
+with [Valentina Muñoz Bernal](https://kellogg.nd.edu/valentina-mu%C3%B1oz-bernal){target="_blank"}, [Sacha Ortiz Siani](https://keough.nd.edu/about/faculty-staff-directory/sacha-ortiz-siani/){target="_blank"}, and [Krister Andersson](https://keough.nd.edu/about/faculty-staff-directory/krister-andersson/){target="_blank"}
+
 
 
 <!-- ## [Gender differences in tertiary healthcare](files/Gender_healthcare.pdf){target="_blank"} -->
