@@ -4,13 +4,13 @@ site: distill::distill_website
 ---
 # Publications
 
-### [Food Security Dynamics in the U.S., 2001-2017](files/Food_Security_Dynamics_AJAE_published.pdf){target="_blank"} (JMP)
+### [Food Security Dynamics in the U.S., 2001-2017](files/Food_Security_Dynamics_AJAE_published.pdf){target="_blank"} 
 
 With [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} and [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"} - at *American Journal of Agricultural Economics* (October 2023)
 
-### [Estimating Multidimensional Development Resilience](files/Estimating_Multidimensional_Development_Resilience-202507.pdf){target="_blank"}
+### [Estimating Multidimensional Development Resilience](files/Estimating_Multidimensional_Development_Resilience.pdf){target="_blank"}
 
-With [Kibrom A. Abay](https://www.ifpri.org/profile/kibrom-abay){target="_blank"}, [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} and [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"} - *forthcoming* at *Journal of Development Economics*
+With [Kibrom A. Abay](https://www.ifpri.org/profile/kibrom-abay){target="_blank"}, [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} and [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"} - at *Journal of Development Economics* (January 2026)
 
 
 <!-- ***Abstract***: We study household food security dynamics in the United States from 2001 to 2017 using a new measure, the probability of food security (PFS), the estimated probability that a household’s food expenditures equal or exceed the minimum cost of a healthful diet. We use PFS to analyze household-level and subpopulation-scale dynamics by investigating the conditional distribution of estimated food insecurity spells and the chronic and transient components of estimated food insecurity. We find that two-thirds of households experienced no estimated food insecurity during the 2001-17 period and more than half of newly food insecure households regain food security within two years. Households headed by female, non-White, or less educated individuals disproportionately suffer persistent, chronic and/or severe food insecurity.-->
@@ -54,9 +54,9 @@ With [Hongdi Zhao](https://hongdi-zhao.github.io/){target="_blank"}
 ***Abstract***: This study investigates the effects of SNAP on food security and its dynamics. The study uses state-level SNAP Policy Index as an exogenous variation as an instrumental variable for program benefit redemption. Using Panel Study of Income Dynamics (PSID) data, the study observe the effects of the program participation on food security over the next 10 years, using the measures of chronic and transitory food security constructed from the Probability of Food Security (PFS), a new food insecurity measure that reflects the estimated probability that the household’s predicted food expenditures exceed the cost of the Thrifty Food Plan (TFP) for its household composition, location and survey period.
 -->
 
-### Estimates of US Food Insecurity Dynamics: Measuring Food Insecurity Across the US with a New Synthetic Panel Approach
+### Food Insecurity Among US Military Veterans
 
-With [Senan Hogan-Hennessy](https://shoganhennessy.github.io/){target="_blank"} and [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"} 
+With [Senan Hogan-Hennessy](https://shoganhennessy.github.io/){target="_blank"}, [Christopher B. Barrett](http://barrett.dyson.cornell.edu/){target="_blank"}, [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_blank"}, and [Matthew P. Rabbitt](https://www.ers.usda.gov/authors/ers-staff-directory/matthew-p-rabbitt/){target="_blank"}
 
 
 <!-- ## [Gender differences in tertiary healthcare](files/Gender_healthcare.pdf){target="_blank"} -->
