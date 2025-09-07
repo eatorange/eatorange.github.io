@@ -11,10 +11,10 @@ navbar:
     - text: "Research"
       href: research.html
     - text: "CV"
-      href: files/CV_Seungmin Lee.pdf
+      href: files/CV_Seungmin_Lee.pdf
   right:
     - icon: fa-envelope fa-lg
-      href: "mailto:sl3235@cornell.edu"
+      href: "mailto:slee76@nd.edu"
     - icon: fa-twitter fa-lg
       href: https://twitter.com/Seungmi08458346
     - icon: fa-linkedin fa-lg
