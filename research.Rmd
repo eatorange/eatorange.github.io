@@ -28,11 +28,11 @@ With [John H. Hoddinott](https://www.human.cornell.edu/people/jfh246){target="_b
 
 # Work in Progress
 
-<!--
-### Poverty Dynamics in Peru - a Data-Driven Approach using Grouped Fixed Effects 
 
-%With [Hongdi Zhao](https://hongdi-zhao.github.io/){target="_blank"}
--->
+### Estimating Long Run Welfare Outcome in Rotating Panel with Grouped Fixed Effects: Application to Poverty Dynamics in Peru 
+
+With [Hongdi Zhao](https://hongdi-zhao.github.io/){target="_blank"}
+
 
 <!--
 ***Abstract***: Understanding individual and household-level welfare dynamics is very important, and it can help economics and policymakers to study and design policies to help households trapped in long-term poverty. However, long-term household-level panel data to study the poverty dynamics are often unavailable. The synthetic panel method has been used recently to estimate poverty transition using cross-sectional data, from bounded estimates under weaker assumptions to point estimates under stronger assumptions of cohort-level information. Point estimates have been very sensitive to how cohorts are defined, but there has been no clear guideline of how cohorts should be defined. This paper suggests a data-driven way to define cohorts, through clustering households with similar dynamics in the error term over the period into cohorts. Using the Peru National Household Survey on Living Conditions and Poverty (ENAHO) from 2007 to 2019, we estimate long-term poverty dynamics up to six years, testing the robustness of the estimates in the long run.

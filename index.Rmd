@@ -1,3 +1,4 @@
+
 ---
 title: "Seungmin Lee"
 site: distill::distill_website
@@ -12,4 +13,4 @@ site: distill::distill_website
 
 I am a postdoctoral research associate at Pulte Institute of Global Development in the University of Notre Dame. My primary interest is food security and food policy. My area of interest include agricultural economics, applied econometrics, public policy and development economics.
 
-Before coming to Cornell, I received Ph.D. in Applied Economics and Management from Cornell University, and B.S. from the University of Michigan in Ann Arbor. I worked as a research assistant at Innovations for Poverty Action (IPA) and Yale University, and as a consultant at Development Impact Evaluation (DIME) at the World Bank.
+Before coming to Pulte, I received Ph.D. in Applied Economics and Management from Cornell University, and B.S. from the University of Michigan in Ann Arbor. I worked as a research assistant at Innovations for Poverty Action (IPA) and Yale University, and as a consultant at Development Impact Evaluation (DIME) at the World Bank.
