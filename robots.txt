@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eatorange.github.io/sitemap.xml
